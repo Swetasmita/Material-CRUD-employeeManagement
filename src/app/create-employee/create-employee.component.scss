@@ -1,0 +1,36 @@
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgb(101, 171, 232);
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .top-padding {
+    padding-top: 10px;
+  }
+  .action{
+  margin-left:20px;
+  }
+   
+  .row {
+    margin-bottom: 16px; /* Add margin to separate rows */
+  }
+  
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-sm-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}

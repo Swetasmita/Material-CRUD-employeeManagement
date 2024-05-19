@@ -1,0 +1,73 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Anita",
+      "lastName": "Sahoo",
+      "email": "ani92@gmail.com",
+      "education": "Graduation",
+      "address": "Grange Manor 32,Ireland",
+      "dob": "1992-11-10T00:00:00.000Z",
+      "gender": "female",
+      "company": "Wipro",
+      "experience": 3,
+      "salary": 35000,
+      "id": "0ea1"
+    },
+    {
+      "id": "2dbb",
+      "firstName": "Jai",
+      "lastName": "Meheta",
+      "email": "jm@gmail.com",
+      "education": "Post Graduate",
+      "address": "15 Harbour park",
+      "dob": "2001-06-18T23:00:00.000Z",
+      "gender": "male",
+      "company": "The Bank of America",
+      "experience": 8,
+      "salary": 68000
+    },
+    {
+      "firstName": "Nishant",
+      "lastName": "Varama",
+      "email": "n7@gmail.com",
+      "education": "Post Graduate",
+      "address": "Villa 25, Mumbai",
+      "dob": "1996-05-07T23:00:00.000Z",
+      "gender": "male",
+      "company": "Google",
+      "experience": 12,
+      "salary": 80000,
+      "id": "2c67"
+    },
+    {
+      "firstName": "Sonia",
+      "lastName": "Mirza",
+      "email": "son22@gmail.com",
+      "education": "Graduation",
+      "address": "Village Park 25",
+      "dob": "1993-02-25T00:00:00.000Z",
+      "gender": "",
+      "company": "Intel",
+      "experience": 5,
+      "salary": 55000,
+      "id": "c989"
+    }
+  ]
+}

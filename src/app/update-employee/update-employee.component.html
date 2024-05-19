@@ -1,0 +1,107 @@
+<div class="container" style="margin-top:1rem;">
+    <div style="text-align: center;">
+      <h1>Update Employee Details</h1>
+      <form [formGroup]="profileForm" class="form-container" (ngSubmit)="onSubmit()">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Profile Information</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="full-width">
+                  <input formControlName="firstName" matInput placeholder="First name">
+                  <mat-error *ngIf="profileForm.controls['firstName'].hasError('required')">
+                    First name is required!
+                  </mat-error>
+                  <mat-error *ngIf="profileForm.controls['firstName'].hasError('minlength')">
+                    Minimum 2 characters required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="full-width">
+                  <input formControlName="lastName" matInput placeholder="Last name">
+                  <mat-error *ngIf="profileForm.controls['lastName'].hasError('required')">
+                    Last Name is required
+                  </mat-error>
+                  <mat-error *ngIf="profileForm.controls['lastName'].hasError('minlength')">
+                    Minimum 2 characters required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field class="full-width">
+                  <input formControlName="email" matInput placeholder="Email Id">
+                  <mat-error *ngIf="profileForm.controls['email'].hasError('required')">
+                    Email is required!
+                  </mat-error>
+                  <mat-error *ngIf="profileForm.controls['email'].hasError('email')">
+                    Invalid email format
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6">
+                <mat-form-field class="full-width">
+                  <mat-label>Choose Education</mat-label>
+                  <mat-select formControlName="education">
+                    <mat-option *ngFor="let val of education" [value]="val">
+                      {{ val }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <!-- <input formControlName="education" matInput placeholder="Education"> -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field class="full-width">
+                  <textarea formControlName="address" matInput placeholder="Address"></textarea>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 top-padding">
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>Select DOB</mat-label>
+                  <input formControlName="dob" matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field class="full-width">
+                  <input formControlName="company" matInput placeholder="Company Name">
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6">
+                <mat-form-field class="full-width">
+                  <input formControlName="experience" matInput placeholder="Experience" type="number">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <mat-form-field class="full-width">
+                  <input formControlName="salary" matInput placeholder="Salary" type="number">
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6">
+                <mat-label><b>Gender:</b></mat-label>&nbsp;
+                <mat-radio-group formControlName="gender">
+                  <mat-radio-button value="male"> Male </mat-radio-button>
+                  <mat-radio-button value="female"> Female </mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button type="submit" mat-raised-button color="primary">Save</button>&nbsp;
+            <button type="button" mat-raised-button color="primary" (click)="resetForm()">Reset</button>
+          </mat-card-actions>
+        </mat-card>
+      </form>
+    </div>
+  </div>
